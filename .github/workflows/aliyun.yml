@@ -1,0 +1,39 @@
+name: Aliyun CI
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.x"
+          cache: "pnpm"
+
+      - name: Build project
+        run: pnpm install --no-frozen-lockfile && pnpm build
+
+      - name: Upload to OSS
+        uses: chf007/aliyun-oss-upload-action@main
+        env:
+          OSS_ACCESS_KEY_ID: ${{ secrets.ALI_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.ALI_KEY_SECRET }}
+        with:
+          source-dir: './dist'
+          dest-dir: '/'
+          bucket: ${{ secrets.ALI_BUCKET }}
+          region: 'oss-cn-hangzhou'

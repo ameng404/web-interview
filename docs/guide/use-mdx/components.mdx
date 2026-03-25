@@ -1,0 +1,92 @@
+# 如何贡献面试题
+
+欢迎参与 Web Interview 面试题库的内容贡献！本文档将介绍如何新增或修改面试题。
+
+## 文件位置
+
+所有面试题位于 `docs/interview/` 目录下，按技术专题分为子目录：
+
+```
+docs/interview/
+├── vue/           # Vue 相关
+├── React/         # React 相关
+├── JavaScript/    # JavaScript 相关
+└── ...            # 其他专题
+```
+
+## 文档格式
+
+每篇面试题使用 Markdown 编写，基本结构如下：
+
+```md
+# 题目标题
+
+## 一、概述
+
+简要说明该知识点是什么。
+
+## 二、详细解析
+
+展开深入讲解，可以包含代码示例、图示等。
+
+## 三、总结
+
+归纳要点，方便面试时快速回顾。
+```
+
+## 添加新题目
+
+1. 在对应专题目录下创建 `.md` 文件
+2. 在该目录的 `_meta.json` 中添加文件名（无需后缀）
+3. 按上述格式编写内容
+
+例如在 `docs/interview/vue/` 下新增 `pinia.md`：
+
+```json
+// docs/interview/vue/_meta.json
+["vue", "bind", ..., "pinia"]
+```
+
+## 使用 React 组件
+
+文件后缀改为 `.mdx` 即可在文档中使用 React 组件：
+
+```mdx
+import { CustomComponent } from './custom';
+
+# 题目标题
+
+<CustomComponent />
+```
+
+## 内置组件
+
+Rspress 提供了一些实用的内置组件，如选项卡：
+
+import { Tabs, Tab } from '@rspress/core/theme';
+
+<Tabs>
+
+<Tab label="Vue 写法">
+
+```js
+export default {
+  data() {
+    return { count: 0 }
+  }
+}
+```
+
+</Tab>
+<Tab label="React 写法">
+
+```jsx
+function Counter() {
+  const [count, setCount] = useState(0);
+  return <div>{count}</div>;
+}
+```
+
+</Tab>
+
+</Tabs>

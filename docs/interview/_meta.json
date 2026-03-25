@@ -1,0 +1,107 @@
+[
+  {
+    "type": "dir",
+    "name": "vue",
+    "label": "Vue 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "vue3",
+    "label": "Vue3 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "React",
+    "label": "React 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "JavaScript",
+    "label": "JavaScript 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "es6",
+    "label": "ES6 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "typescript",
+    "label": "TypeScript 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "css",
+    "label": "CSS 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "webpack",
+    "label": "Webpack 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "http",
+    "label": "HTTP 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "NodeJS",
+    "label": "Node.js 系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "git",
+    "label": "版本控制系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "linux",
+    "label": "操作系统系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "algorithm",
+    "label": "算法系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "applet",
+    "label": "小程序系列",
+    "collapsible": true,
+    "collapsed": true
+  },
+  {
+    "type": "dir",
+    "name": "design",
+    "label": "设计模式系列",
+    "collapsible": true,
+    "collapsed": true
+  }
+]
