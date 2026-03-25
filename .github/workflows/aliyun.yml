@@ -33,7 +33,7 @@ jobs:
           OSS_ACCESS_KEY_ID: ${{ secrets.ALI_KEY_ID }}
           OSS_ACCESS_KEY_SECRET: ${{ secrets.ALI_KEY_SECRET }}
         with:
-          source-dir: './dist'
+          source-dir: './doc_build'
           dest-dir: '/'
           bucket: ${{ secrets.ALI_BUCKET }}
           region: 'oss-cn-hangzhou'
