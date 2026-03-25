@@ -41,7 +41,7 @@ const start = (page - 1) * pageSize
 
 当确定了`limit`和`start`的值后，就能够确定`SQL`语句：
 
-```JS
+```js
 const sql = `SELECT * FROM record limit ${pageSize} OFFSET ${start};`
 ```
 
@@ -49,7 +49,7 @@ const sql = `SELECT * FROM record limit ${pageSize} OFFSET ${start};`
 
 关于查询数据总数的`SQL`语句为，`record`为表名：
 
-```mysql
+```sql
 SELECT COUNT(*) FROM record
 ```
 

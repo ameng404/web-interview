@@ -167,7 +167,7 @@ export default class YourComponent extends Vue {
 
 `vue-property-decorator` 提供的 `@Emit` 装饰器就是代替`Vue `中的事件的触发`$emit`，如下：
 
-````TS
+````ts
 import {Vue, Component, Emit} from 'vue-property-decorator';
     @Component({})
     export default class Some extends Vue{

@@ -72,7 +72,7 @@
 
 less和scss
 
-```Css
+```css
 .box {
   display: block;
 }
@@ -80,14 +80,14 @@ less和scss
 
 sass
 
-```Css
+```css
 .box
   display: block
 ```
 
 stylus
 
-```Css
+```css
 .box
   display: block
 ```
@@ -104,7 +104,7 @@ stylus
 
 less
 
-```Css
+```css
 .a {
   &.b {
     color: red;
@@ -120,7 +120,7 @@ less
 
 `less`声明的变量必须以`@`开头，后面紧跟变量名和变量值，而且变量名和变量值需要使用冒号`:`分隔开
 
-```Css
+```css
 @red: #c00;
 
 strong {
@@ -130,7 +130,7 @@ strong {
 
 `sass`声明的变量跟`less`十分的相似，只是变量名前面使用`@`开头
 
-```Css
+```css
 $red: #c00;
 
 strong {
@@ -142,7 +142,7 @@ strong {
 
 在`stylus`中我们不建议使用`@`符号开头声明变量
 
-```Css
+```css
 red = #c00
 
 strong
@@ -159,7 +159,7 @@ strong
 
 `sass`中不存在全局变量
 
-```Css
+```css
 $color: black;
 .scoped {
   $bg: blue;
@@ -174,7 +174,7 @@ $color: black;
 
 编译后
 
-```Css
+```css
 .scoped {
   color:white;/*是白色*/
   background-color:blue;
@@ -190,7 +190,7 @@ $color: black;
 
 `less`与`stylus`的作用域跟`javascript`十分的相似，首先会查找局部定义的变量，如果没有找到，会像冒泡一样，一级一级往下查找，直到根为止
 
-```Css
+```css
 @color: black;
 .scoped {
   @bg: blue;
@@ -205,7 +205,7 @@ $color: black;
 
 编译后：
 
-```Css
+```css
 .scoped {
   color:white;/*白色（调用了局部变量）*/
   background-color:blue;
@@ -227,7 +227,7 @@ $color: black;
 
 在`less`中，混合的用法是指将定义好的`ClassA`中引入另一个已经定义的`Class`，也能使用够传递参数，参数变量为`@`声明
 
-```Css
+```css
 .alert {
   font-weight: 700;
 }
@@ -245,7 +245,7 @@ $color: black;
 
 编译后
 
-```Css
+```css
 .alert {
   font-weight: 700;
 }
@@ -258,7 +258,7 @@ $color: black;
 
 `Sass`声明`mixins`时需要使用`@mixinn`，后面紧跟`mixin`的名，也可以设置参数，参数名为变量`$`声明的形式
 
-```Css
+```css
 @mixin large-text {
   font: {
     family: Arial;
@@ -277,7 +277,7 @@ $color: black;
 
 `stylus`中的混合和前两款`Css`预处理器语言的混合略有不同，他可以不使用任何符号，就是直接声明`Mixins`名，然后在定义参数和默认值之间用等号（=）来连接
 
-```Css
+```css
 error(borderWidth= 2px) {
   border: borderWidth solid #F00;
   color: #F00;
@@ -305,7 +305,7 @@ error(borderWidth= 2px) {
 
 `scss`、`less`、`stylus`三者的使用方法都如下所示
 
-```Css
+```css
 @import './common';
 @import './github-markdown';
 @import './mixin';

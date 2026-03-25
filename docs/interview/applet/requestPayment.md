@@ -45,7 +45,7 @@
 
 其中后端响应数据必要的信息则是`wx.requestPayment`方法所需要的参数，大致如下：
 
-```JS
+```js
 wx.requestPayment({
   // 时间戳
   timeStamp: '',

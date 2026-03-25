@@ -23,7 +23,7 @@
 
 在`javascript`中，实现一个单例模式可以用一个变量来标志当前的类已经创建过对象，如果下次获取当前类的实例时，直接返回之前创建的对象即可，如下：
 
-  ```JS
+  ```js
   // 定义一个类
   function Singleton(name) {
       this.name = name;
