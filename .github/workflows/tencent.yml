@@ -19,13 +19,8 @@ jobs:
       - name: Install & Build
         run: bun install && bun run build
 
-      - name: Upload COS
-        uses: TencentCloud/cos-action@v1
-        with:
-          secret_id: ${{ secrets.SECRET_ID }}
-          secret_key: ${{ secrets.SECRET_KEY }}
-          cos_bucket: ${{ secrets.SECRET_BUCKET }}
-          cos_region: ap-shanghai
-          local_path: doc_build
-          remote_path: /
-          clean: true
+      - name: Upload to COS
+        run: |
+          pip install coscmd
+          coscmd config -a ${{ secrets.SECRET_ID }} -s ${{ secrets.SECRET_KEY }} -b ${{ secrets.SECRET_BUCKET }} -r ap-shanghai
+          coscmd upload -rs --delete doc_build/ /
